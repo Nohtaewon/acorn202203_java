@@ -20,6 +20,7 @@ public class AClass {
 		p3.takePicture();
 		
 //		Phone p4=new SmartPhone(); <= new 이거() 보다 new를 뭘로 했는지
+		//객체가 스마트폰이라 스마트폰까지만 캐스팅가능
 //		Game p5=(Game)p4;		   <= 이게 낮으면 캐스팅 에러
 		
 	}
