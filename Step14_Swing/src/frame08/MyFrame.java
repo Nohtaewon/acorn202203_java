@@ -35,7 +35,7 @@ public class MyFrame extends JFrame implements ActionListener{
 		JFrame f=new MyFrame("나의 프레임");
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.setBounds(100, 100, 500, 500);
-		f.setVisible(true);// aa
+		f.setVisible(true);//
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
