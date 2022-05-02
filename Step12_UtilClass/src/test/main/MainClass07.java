@@ -32,7 +32,7 @@ public class MainClass07 {
 		//동일한 key 값으로 다시 담으면 수정
 		map1.put("name", "에이콘");
 		
-		//특정 key 값으로 담긴 내용 삭제, 성공하면 true, 실피햐면 false 리턴
+		//특정 key 값으로 담긴 내용 삭제, 성공하면 true, 실패하면 false 리턴
 		map1.remove("isMan");
 		
 		//모두 삭제
