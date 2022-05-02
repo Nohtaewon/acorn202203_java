@@ -12,7 +12,7 @@ import java.util.Set;
  * 
  * 1~45 사이의 숫자 중에 6개가 나와야 하며
  * 중복되는 숫자가 있으면 안되고
- * 작은 숫자부터 큰 숫자 까지 정렬까지 해서 출력해 보세요.
+ * 작은 숫자부터 큰 숫자 까지 정렬까지 해서 출력해 보세요..
  */
 public class QuizMain {
 	public static void main(String[] args) {
