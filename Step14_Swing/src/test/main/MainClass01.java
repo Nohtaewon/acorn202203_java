@@ -14,7 +14,7 @@ public class MainClass01 {
 		f.setLayout(null);
 		//버튼 객체 생성해서
 		JButton btn =new JButton("눌러보셈");
-		//표시될 위치와 크기를 지정후
+		//표시될 위치와 크기를 지정 후
 		btn.setBounds(10, 10, 100, 40);
 		//프레임에 추가하기
 		f.add(btn);
