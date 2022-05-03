@@ -6,9 +6,12 @@ import javax.swing.JFrame;
 public class MyFrame extends JFrame{
 	//생성자
 	public MyFrame(String title) {
+		//부모생성자에 프레임의 제목 넘겨주기
 		super(title);
 		setBounds(100, 100, 500, 500);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);//static final 상수 필드 
+		//부모클래스의 public static final int EXIT_ON_CLOSE=3;
+		//JFrame.EXIT_ON_CLOSE 내 부모클래스 껀데 마치 내꺼처럼
 		//프레임의 레이아웃 매니저를 사용하지 않기 때문에 UI를 절대 좌표에 직접 배치해야 한다.
 		setLayout(null);
 		
