@@ -39,6 +39,7 @@ public class MyFrame extends JFrame implements ActionListener{
 	public static void main(String[] args) {//static 영역
 		JFrame f=new MyFrame("나의 프레임");//참조값에 점찍어서 불러야함 this 사용못함
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 		f.setBounds(100, 100, 500, 500);
 		f.setVisible(true);
 		
