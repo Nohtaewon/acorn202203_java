@@ -23,7 +23,7 @@ import javax.swing.JTextField;
  * 입력한 문자열이 myFolder/memo.txt 파일에 append 되도록 해보세요
  * 
  * 2. 불러오기 버튼을 누르면 myFolder/memo.txt 파일에 있는 모든 문자열을
- * 	  JTextArea 에 출력하도록 해 보세요.
+ * 	  JTextArea 에 출력하도록 해 보세요..
  */
 public class QuizMain2 extends JFrame implements ActionListener{
    //필드
