@@ -7,7 +7,7 @@ public class DBConnect {
 	//필드
 	Connection conn;
 	
-	//생성자
+	//생성자 
 	public DBConnect() {
 		//Connection 객체의 참조값을 얻어내서 필드에 저장하기
 		try {
