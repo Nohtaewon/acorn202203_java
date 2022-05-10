@@ -9,7 +9,7 @@ import java.util.List;
 import test.dto.MemberDto;
 import test.util.DBConnect;
 
-public class MainClass12 {
+public class MainClass13 {
 	public static void main(String[] args) {
 		//메소드가 리턴해주는 전체 회원의 목록을 main 메소드 안에서 사용하고 싶다면?
 		List<MemberDto> list=getList();//메소드를 호출해서 전체 회원목록을 받아온다.
