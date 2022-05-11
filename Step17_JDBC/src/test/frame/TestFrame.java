@@ -31,7 +31,6 @@ public class TestFrame extends JFrame implements ActionListener{
    JTextField inputName, inputAddr;
    DefaultTableModel model;
    JTable table;
-   MemberDto dto;
    MemberDao dao;
    
    //»ý¼ºÀÚ
@@ -81,9 +80,6 @@ public class TestFrame extends JFrame implements ActionListener{
    public void displayMember() {
 	   dao=new MemberDao();
 	   List<MemberDto> list=dao.getList();
-	   // for (MemberDto memberDto : dao.getList()) {
-	   //	do
-	   // }
 	   for(MemberDto dto:list) {
 		   model.addRow(new Object[] {
 			dto.getNum(), 
@@ -107,19 +103,20 @@ public class TestFrame extends JFrame implements ActionListener{
 	   String command = e.getActionCommand();
 	   try {
 		   if(command.equals("save")) {
-			   dto=new MemberDto();
+			   MemberDto dto=new MemberDto();
 			   dto.setName(inputName.getText());
 			   dto.setAddr(inputAddr.getText());
 			   dao.insert(dto);
 			   model.setRowCount(0);
-			   displayMember();
+			   
 		   }else if(command.equals("delete")) {
 			   int selectedIndex=table.getSelectedRow();
 			   int num=(int)model.getValueAt(selectedIndex, 0);
 			   dao.delete(num);
 			   model.setRowCount(0);
-			   displayMember();
+			   
 		   }
+		   displayMember();
 	   	}catch(Exception exe) {
 			exe.printStackTrace();
 		}
