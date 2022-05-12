@@ -73,10 +73,10 @@ public class FoodFrame extends JFrame implements ActionListener, PropertyChangeL
           public boolean isCellEditable(int row, int column) {
              System.out.println(row+" | "+column);
              
-             if(column==0) { // 0번째 칼럼은 
-                return false; //수정 불가하게 false 를 리턴해 준다.
-             }else { //다른 경우는 
-                return true; //모두 수정 가능하게 true 를 리턴해 준다. 
+             if(column==0) {
+                return false;
+             }else {
+                return true; 
              }
           }
        };
@@ -121,25 +121,19 @@ public class FoodFrame extends JFrame implements ActionListener, PropertyChangeL
 
 		   }else if(command.equals("delete")) {
 			   int[] rows=table.getSelectedRows();
-			   if(rows.length==0) {//없다면 -1 리턴
-				   //선택된 row 가 없다고 알려준다.
+			   if(rows.length==0) {
 				   JOptionPane.showMessageDialog(this, "선택된 row 가 없습니다.","오류",JOptionPane.ERROR_MESSAGE);
-				   //프레임아 밑에 코드는 실행하지마
 				   return;
 			   }
 			   
 			   for(int tmp:rows) {
-				 //2. 선택한 row 의 가장 첫번째 칼럼에 있는 숫자를 읽어내기
-				   int num=(int)model.getValueAt(tmp, 0); // Object 타입이라 int로 캐스팅
-				   //3. MemberDao 객체를 이용해서 DB에서 삭제
+				   int num=(int)model.getValueAt(tmp, 0);
 				   dao.delete(num);
 			   } 
 
 		   }else if(command.equals("random")) {
-			   //랜덤을 눌렀을 때 알림창이 집중될 수 있게 테이블을 지우고
 			   model.setRowCount(0);
-			   //알림창에 랜덤으로 얻어온 row의 name을 가져온다.
-			   JOptionPane.showMessageDialog(this, dao.getRandom(1).getName()+".. 드시겠습니까?","짜잔",JOptionPane.QUESTION_MESSAGE);
+			   JOptionPane.showMessageDialog(this, dao.getRandom(1).getName()+" !!!","짜잔",JOptionPane.QUESTION_MESSAGE);
 		   }
 		   displayFood();
 	   	}catch(Exception exe) {
